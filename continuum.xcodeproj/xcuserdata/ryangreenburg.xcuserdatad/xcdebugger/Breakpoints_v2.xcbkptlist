@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "continuum/Controllers/ModelControllers/PostController.swift"
+            timestampString = "573091270.783196"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "addComment(text:post:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "continuum/Controllers/ModelControllers/PostController.swift"
+            timestampString = "573091270.7832921"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "addComment(text:post:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "continuum.PostController.addComment(text: Swift.String, post: continuum.Post, completion: (Swift.Optional&lt;continuum.Comment&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "continuum"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryangreenburg/Desktop/Xcode/week5/day2/continuum/continuum/Controllers/ModelControllers/PostController.swift"
+                  timestampString = "573090806.023967"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "1211">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Optional&lt;__C.CKRecord&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in continuum.PostController.addComment(text: Swift.String, post: continuum.Post, completion: (Swift.Optional&lt;continuum.Comment&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "continuum"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ryangreenburg/Desktop/Xcode/week5/day2/continuum/continuum/Controllers/ModelControllers/PostController.swift"
+                  timestampString = "573090806.0261461"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "77">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

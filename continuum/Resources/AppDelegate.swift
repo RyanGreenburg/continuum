@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +16,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        
         return true
+    }
+    
+    func checkAccountStatus(completion: @escaping (Bool) -> Void) {
+        CKContainer.default().accountStatus { (status, error) in
+            if let error = error {
+                print("Error checking accountStatus \(error.localizedDescription)")
+                completion(false)
+                return
+            } else {
+                DispatchQueue.main.async {
+                    let tabBarController = self.window?.rootViewController
+                    let errorText = "Sign into iCloud in Settings"
+                    switch status {
+                    case .available:
+                        completion(true)
+                    case .restricted:
+                        tabBarController?.presentSimpleAlertWith(title: errorText, message: "iCloud account is restricted")
+                        completion(false)
+                    case .noAccount:
+                        tabBarController?.presentSimpleAlertWith(title: errorText, message: "iCloud account not found.")
+                        completion(false)
+                    case .couldNotDetermine:
+                        tabBarController?.presentSimpleAlertWith(title: errorText, message: "iCloud account was unable to be fetched.")
+                        completion(false)
+                    }
+                }
+            }
+            
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -40,7 +72,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
